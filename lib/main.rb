@@ -10,7 +10,7 @@ class Game
     #Set the guesser_word to a default length equal to mystery_word with value of underscore
     #This is to replace the underscore with a correct letter in the guesser_word array during 
     #gameplay.
-    @guesser_word = Array.new('_', mystery_word.length)
+    @guesser_word = Array.new(mystery_word.length, "_")
     #Assign parameter of Game class to the mystery_word instance variable. The parameter is a 
     #random value picked from the restricted_words array. When loading the game after saving the
     #previous game, the value of the mystery_word will not be lost when player continues the guessing
