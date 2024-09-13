@@ -3,6 +3,9 @@
 #word and hide the word from the user to guess the letter. The instance variables for the 
 #Game class will be the incorrect_guesses_left, guesser_word, mystery_word and incorrect_inputs
 class Game  
+  #Add accessor methods for incorrect_guesses_left, guesser_word and incorrect_inputs so those 
+  #instance variables can be accessed and modified during the gameplay. Add mystery_word as
+  #a getter method to only read the mystery word.
   def initialize(mystery_word)
     #Set incorrect_guess_left to 10 as the human has a maximum of 10 incorrect guesses left
     #when nominating a letter for the mystery word provided
