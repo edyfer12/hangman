@@ -14,4 +14,3 @@ restricted_words = dictionary.filter do |word|
     word
   end
 end
-puts restricted_words
