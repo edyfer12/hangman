@@ -15,3 +15,7 @@ restricted_words = dictionary.filter do |word|
   end
 end
 
+#Create a Game class that is used to enable both the computer and human to challenge
+#each other in the game of Hangman. The computer will act as a host to nominate the mystery
+#word and hide the word from the user to guess the letter. The instance variables for the 
+#Game class will be the incorrect_guesses_left, guesser_word, mystery_word and incorrect_inputs. 
