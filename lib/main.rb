@@ -1,3 +1,8 @@
+#Create a Game class that is used to enable both the computer and human to challenge
+#each other in the game of Hangman. The computer will act as a host to nominate the mystery
+#word and hide the word from the user to guess the letter. The instance variables for the 
+#Game class will be the incorrect_guesses_left, guesser_word, mystery_word and incorrect_inputs
+
 #Create variable called dictionary to store all the contents from the file called
 #google-10000-english-no-swears.txt line by line and return as an array into memory.
 #This will be used by the computer to pick out the random word for the guesser to select
@@ -14,8 +19,3 @@ restricted_words = dictionary.filter do |word|
     word
   end
 end
-
-#Create a Game class that is used to enable both the computer and human to challenge
-#each other in the game of Hangman. The computer will act as a host to nominate the mystery
-#word and hide the word from the user to guess the letter. The instance variables for the 
-#Game class will be the incorrect_guesses_left, guesser_word, mystery_word and incorrect_inputs. 
