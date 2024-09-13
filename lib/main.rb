@@ -2,6 +2,14 @@
 #each other in the game of Hangman. The computer will act as a host to nominate the mystery
 #word and hide the word from the user to guess the letter. The instance variables for the 
 #Game class will be the incorrect_guesses_left, guesser_word, mystery_word and incorrect_inputs
+class Game  
+  def initialize(mystery_word)
+    @incorrect_guesses_left = 10
+    @guesser_word = Array.new('_')
+    @mystery_word = mystery_word
+    @incorrect_inputs = []
+  end
+end
 
 #Create variable called dictionary to store all the contents from the file called
 #google-10000-english-no-swears.txt line by line and return as an array into memory.
