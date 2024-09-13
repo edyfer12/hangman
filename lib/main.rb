@@ -4,9 +4,20 @@
 #Game class will be the incorrect_guesses_left, guesser_word, mystery_word and incorrect_inputs
 class Game  
   def initialize(mystery_word)
+    #Set incorrect_guess_left to 10 as the human has a maximum of 10 incorrect guesses left
+    #when nominating a letter for the mystery word provided
     @incorrect_guesses_left = 10
+    #Set the guesser_word to a default length equal to mystery_word with value of underscore
+    #This is to replace the underscore with a correct letter in the guesser_word array during 
+    #gameplay.
     @guesser_word = Array.new('_')
+    #Assign parameter of Game class to the mystery_word instance variable. The parameter is a 
+    #random value picked from the restricted_words array. When loading the game after saving the
+    #previous game, the value of the mystery_word will not be lost when player continues the guessing
+    #the letter.
     @mystery_word = mystery_word
+    #Set the instance variable incorrect_inputs as an empty array. The array will store in the incorrect
+    #guesses selected by the human player during the game.
     @incorrect_inputs = []
   end
 end
