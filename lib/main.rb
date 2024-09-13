@@ -4,3 +4,4 @@
 #the letter for the mystery word.
 
 dictionary = File.readlines('../google-10000-english-no-swears.txt')
+
