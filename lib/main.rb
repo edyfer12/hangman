@@ -3,4 +3,4 @@
 #This will be used by the computer to pick out the random word for the guesser to select
 #the letter for the mystery word.
 
-dictionary = File.readlines('google-10000-english-no-swears.txt')
+dictionary = File.readlines('../google-10000-english-no-swears.txt')
