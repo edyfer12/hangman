@@ -21,7 +21,7 @@ class Game
     #random value picked from the restricted_words array. When loading the game after saving the
     #previous game, the value of the mystery_word will not be lost when player continues the guessing
     #the letter.
-    @mystery_word = mystery_word
+    @mystery_word = mystery_word.strip
     #Set the instance variable incorrect_inputs as an empty array. The array will store in the incorrect
     #guesses selected by the human player during the game.
     @incorrect_inputs = []
