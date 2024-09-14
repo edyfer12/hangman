@@ -87,7 +87,7 @@ class Game
       elsif play_option != 'n' || play_option != 'y' || play_option != 'l'
         request_game
         #Add a new input from user to see if they want to play, load or cancel game
-        play_option = gets.chomp.strip
+        play_option = gets.chomp.strip.downcase
       end
     end
     #If y is entered in play_option variable, enable the human player to guess a letter
