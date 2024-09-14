@@ -102,10 +102,10 @@ class Game
     puts
     #If y is entered in play_option variable, enable the human player to guess a letter
     #in the mystery word provided by the computer that is acting like a game host using a while loop
-      #Declare variable called player_response and store input that is a letter or 'save' into memory
-      player_response = gets.chomp.strip.downcase
       #Print out "Please guess a letter or type 'save' to save the game: "
       print "Please guess a letter or type 'save' to save the game: "
+      #Declare variable called player_response and store input that is a letter or 'save' into memory
+      player_response = gets.chomp.strip.downcase
   end
   private
   #Create a private instance method called request_game that displays whether to play,
