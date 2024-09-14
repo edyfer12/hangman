@@ -60,11 +60,17 @@ class Game
     puts
     puts "Incorrect guesses would be:"
     puts
-    puts "- letter selected does not exist in the mystery word"
-    puts "- same correct letter has been chosen more than once"
-    puts "- at least two letters entered other than 'save'"
+    puts "- Letter selected does not exist in the mystery word"
+    puts "- Same correct letter has been chosen more than once"
+    puts "- At least two letters entered other than 'save'"
     puts
-    puts "You can load the game if you have previously saved the game"
+    puts "Special Features included:"
+    puts "- Save game during gameplay"
+    puts "- Load game if previous game saved"
+    puts 
+    puts "You lose if there are no incorrect guesses left"
+    puts "You win when all the letters guessed match with mystery word"
+    puts
   end
   #Create an instance method called start_game where the human is at the stage of challenging against
   #the computer 
