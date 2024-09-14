@@ -86,7 +86,7 @@ class Game
     end
   end
   private
-  #Create a private instance method called show_request that displays whether to play,
+  #Create a private instance method called request_game that displays whether to play,
   #load or cancel game
   def show_request
     #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
