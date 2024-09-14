@@ -68,13 +68,6 @@ class Game
     puts "        continue challenging against the computer. To load the game, enter"
     puts "        'l' before gameplay."
     puts
-    #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
-    if File.exist? 'hangman.json'
-      puts 'Do you want to start new game(y/n) or load(l)?'
-    #Otherwise, print out "Do you want to start new game(y/n) or load(l)?" 
-    else
-      puts "Do you want to start new game(y/n)?"
-    end
   end
   #Create an instance method called play_game where the human is at the stage of challenging against
   #the computer  
@@ -95,6 +88,14 @@ restricted_words = dictionary.filter do |word|
   if word.strip.length >= 5 && word.strip.length <= 12
     word
   end
+end
+
+#If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
+if File.exist? 'hangman.json'
+  puts 'Do you want to start new game(y/n) or load(l)?'
+#Otherwise, print out "Do you want to start new game(y/n) or load(l)?" 
+else
+  puts "Do you want to start new game(y/n)?"
 end
 
 #Create a Game object to play the game of Hangman between computer and human
