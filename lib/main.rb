@@ -90,6 +90,7 @@ class Game
         play_option = gets.chomp.strip.downcase
       end
     end
+    #Display the guesser word to indicate the start of the game
     #If y is entered in play_option variable, enable the human player to guess a letter
     #in the mystery word provided by the computer that is acting like a game host using a while loop
   end
