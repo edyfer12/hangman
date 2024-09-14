@@ -43,4 +43,4 @@ restricted_words = dictionary.filter do |word|
     word
   end
 end
-puts Game.new(restricted_words.sample).guesser_word
+p Game.new(restricted_words.sample).guesser_word
