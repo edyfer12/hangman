@@ -97,6 +97,7 @@ class Game
     #Display the guesser word to indicate the start of the game
     puts guesser_word.join(' ')
     #Add whitespace
+    puts
     #If y is entered in play_option variable, enable the human player to guess a letter
     #in the mystery word provided by the computer that is acting like a game host using a while loop
       #Declare variable called player_response and store input that is a letter or 'save' into memory
