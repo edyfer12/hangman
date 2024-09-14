@@ -69,7 +69,7 @@ class Game
     puts "        'l' before gameplay."
     puts
   end
-  #Create an instance method called play_game where the human is at the stage of challenging against
+  #Create an instance method called start_game where the human is at the stage of challenging against
   #the computer  
     #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
     if File.exist? 'hangman_save.json'
