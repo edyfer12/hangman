@@ -24,6 +24,7 @@ class Game
     #Set the instance variable incorrect_inputs as an empty array. The array will store in the incorrect
     #guesses selected by the human player during the game.
     @incorrect_inputs = []
+    #Display the instructions for the human player on how to play Hangman
   end
 end
 
