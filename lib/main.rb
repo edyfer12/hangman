@@ -91,7 +91,7 @@ restricted_words = dictionary.filter do |word|
 end
 
 #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
-if File.exist? 'hangman.json'
+if File.exist? 'hangman_save.json'
   puts 'Do you want to start new game(y/n) or load(l)?'
 #Otherwise, print out "Do you want to start new game(y/n) or load(l)?" 
 else
