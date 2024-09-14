@@ -73,6 +73,7 @@ class Game
   #Create an instance method called start_game where the human is at the stage of challenging against
   #the computer 
   def start_game 
+    #If an input is entered other than n, y or l, then print to user the same message if they want to start game
     #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
     if File.exist? 'hangman_save.json'
       puts 'Do you want to start new game(y/n) or load(l)?'
@@ -87,7 +88,6 @@ class Game
     #If n is entered in play_option variable, close the program
     #If y is entered in play_option variable, play the game against the computer
     #If l is entered in play_option variable, load the object from the hangman_save.json file
-    #If an input is entered other than n, y or l, then print to user the same message if they want to start game
   end
 end
 
