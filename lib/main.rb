@@ -87,6 +87,7 @@ class Game
       #If an input is entered other than n, y or l, then print to user the same message if they want to start game
       elsif play_option != 'n' || play_option != 'y' || play_option != 'l'
         request_game
+        #Add a new input from user to see if they want to play, load or cancel game
       end
     end
   end
