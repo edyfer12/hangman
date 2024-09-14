@@ -102,4 +102,4 @@ restricted_words = dictionary.filter do |word|
 end
 
 #Create a Game object to play the game of Hangman between computer and human
-Game.new(restricted_words.sample)
+Game.new(restricted_words.sample).start_game
