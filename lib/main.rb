@@ -88,6 +88,8 @@ class Game
     #If y is entered in play_option variable, play the game against the computer
     #If l is entered in play_option variable, load the object from the hangman_save.json file
     #If an input is entered other than n, y or l, then print to user the same message if they want to start game
+    elsif play_option != 'n' || play_option != 'y' || play_option != 'l'
+    end
   end
 end
 
