@@ -32,7 +32,7 @@ end
 #This will be used by the computer to pick out the random word for the guesser to select
 #the letter for the mystery word.
 
-dictionary = File.readlines('google-10000-english-no-swears.txt')
+dictionary = File.readlines('../google-10000-english-no-swears.txt')
 
 #Create a variable called mystery_word. The mystery_word will consist of a randomly 
 #chosen word from the dictionary array that has between 5 and 12 characters which is one
