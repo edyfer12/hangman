@@ -87,4 +87,4 @@ restricted_words = dictionary.filter do |word|
     word
   end
 end
- Game.new(restricted_words.sample)
+Game.new(restricted_words.sample)
