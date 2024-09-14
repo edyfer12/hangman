@@ -103,7 +103,7 @@ class Game
     #If y is entered in play_option variable, enable the human player to guess a letter
     #in the mystery word provided by the computer that is acting like a game host using a while loop
       #Declare variable called player_response and store input that is a letter or 'save' into memory
-      player_response = gets.chomp.strip
+      player_response = gets.chomp.strip.downcase
       #Print out "Please guess a letter or type 'save' to save the game: "
       puts "Please guess a letter or type 'save' to save the game: "
   end
