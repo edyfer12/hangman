@@ -68,11 +68,9 @@ class Game
     puts "        continue challenging against the computer. To load the game, enter"
     puts "        'l' before gameplay."
     puts
-  end
-  #Add an instance method called play_game where the human challenges against the computer
-  #in Hangman
     #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
     #Otherwise, print out "Do you want to start new game(y/n) or load(l)?" 
+  end
 end
 
 #Create variable called dictionary to store all the contents from the file called
