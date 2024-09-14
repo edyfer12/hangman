@@ -6,6 +6,8 @@ class Game
   #Add accessor methods for incorrect_guesses_left, guesser_word and incorrect_inputs so those 
   #instance variables can be accessed and modified during the gameplay. Add mystery_word as a 
   #getter method as it is intended to be read-only.
+  attr_accessor :incorrect_guesses_left, :guesser_word, :incorrect_inputs
+  attr_reader :mystery_word
   def initialize(mystery_word)
     #Set incorrect_guess_left to 10 as the human has a maximum of 10 incorrect guesses left
     #when nominating a letter for the mystery word provided
