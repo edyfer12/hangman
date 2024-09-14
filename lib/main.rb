@@ -88,7 +88,7 @@ class Game
   private
   #Create a private instance method called request_game that displays whether to play,
   #load or cancel game
-  def show_request
+  def request_game
     #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
     if File.exist? 'hangman_save.json'
       puts 'Do you want to start new game(y/n) or load(l)?'   
