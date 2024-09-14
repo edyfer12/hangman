@@ -94,10 +94,12 @@ end
 if File.exist? 'hangman_save.json'
   puts 'Do you want to start new game(y/n) or load(l)?'
   #Create variable called play_option and store the input from user
+  play_option = gets.chomp
 #Otherwise, print out "Do you want to start new game(y/n) or load(l)?" 
 else
   puts "Do you want to start new game(y/n)?"
   #Add variable called play_option that aim to store input from user
+  play_option = gets.chomp
 end
 
 #Create a Game object to play the game of Hangman between computer and human
