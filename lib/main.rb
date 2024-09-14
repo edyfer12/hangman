@@ -71,6 +71,17 @@ class Game
   end
   #Create an instance method called play_game where the human is at the stage of challenging against
   #the computer  
+    #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
+    if File.exist? 'hangman_save.json'
+      puts 'Do you want to start new game(y/n) or load(l)?'
+      #Create variable called play_option and store the input from user
+      play_option = gets.chomp
+    #Otherwise, print out "Do you want to start new game(y/n) or load(l)?" 
+    else
+      puts "Do you want to start new game(y/n)?"
+      #Add variable called play_option that aim to store input from user
+      play_option = gets.chomp
+    end
 end
 
 #Create variable called dictionary to store all the contents from the file called
@@ -88,18 +99,6 @@ restricted_words = dictionary.filter do |word|
   if word.strip.length >= 5 && word.strip.length <= 12
     word
   end
-end
-
-#If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
-if File.exist? 'hangman_save.json'
-  puts 'Do you want to start new game(y/n) or load(l)?'
-  #Create variable called play_option and store the input from user
-  play_option = gets.chomp
-#Otherwise, print out "Do you want to start new game(y/n) or load(l)?" 
-else
-  puts "Do you want to start new game(y/n)?"
-  #Add variable called play_option that aim to store input from user
-  play_option = gets.chomp
 end
 
 #Create a Game object to play the game of Hangman between computer and human
