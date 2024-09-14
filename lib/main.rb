@@ -70,7 +70,8 @@ class Game
     puts
   end
   #Create an instance method called start_game where the human is at the stage of challenging against
-  #the computer  
+  #the computer 
+  def start_game 
     #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
     if File.exist? 'hangman_save.json'
       puts 'Do you want to start new game(y/n) or load(l)?'
@@ -82,6 +83,7 @@ class Game
       #Add variable called play_option that aim to store input from user
       play_option = gets.chomp
     end
+  end
 end
 
 #Create variable called dictionary to store all the contents from the file called
