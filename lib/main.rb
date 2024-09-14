@@ -91,7 +91,7 @@ class Game
       end
     end
     #If y is entered in play_option variable, enable the human player to guess a letter
-    #in the mystery word provided by the computer that is acting like a game host
+    #in the mystery word provided by the computer that is acting like a game host using a while loop
   end
   private
   #Create a private instance method called request_game that displays whether to play,
