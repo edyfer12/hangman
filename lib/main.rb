@@ -82,7 +82,6 @@ class Game
       #If n is entered in play_option variable, close the program
       if play_option == 'n'
         exit
-      #If y is entered in play_option variable, play the game against the computer
       #If l is entered in play_option variable, load the object from the hangman_save.json file
       #If an input is entered other than n, y or l, then print to user the same message if they want to start game
       elsif play_option != 'n' || play_option != 'y' || play_option != 'l'
@@ -91,6 +90,7 @@ class Game
         play_option = gets.chomp
       end
     end
+    #If y is entered in play_option variable, play the game against the computer
   end
   private
   #Create a private instance method called request_game that displays whether to play,
