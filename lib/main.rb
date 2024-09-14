@@ -91,8 +91,18 @@ class Game
     elsif play_option != 'n' || play_option != 'y' || play_option != 'l'
     end
   end
+  private
   #Create a private instance method called show_request that displays whether to play,
   #load or cancel game
+  def show_request
+    #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
+    if File.exist? 'hangman_save.json'
+      puts 'Do you want to start new game(y/n) or load(l)?'   
+    #Otherwise, print out "Do you want to start new game(y/n) or load(l)?" 
+    else
+      puts "Do you want to start new game(y/n)?"
+    end
+  end
 end
 
 #Create variable called dictionary to store all the contents from the file called
