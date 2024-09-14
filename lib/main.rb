@@ -72,7 +72,7 @@ class Game
   end
   #Create an instance method called start_game where the human is at the stage of challenging against
   #the computer 
-  def start_game 
+  def play_game 
     #Add a private method that requests the user to play the game
     request_game
     #Create variable called play_option and store the input from user
@@ -124,4 +124,4 @@ restricted_words = dictionary.filter do |word|
 end
 
 #Create a Game object to start the game of Hangman between computer and human
-Game.new(restricted_words.sample).start_game
+Game.new(restricted_words.sample).play_game
