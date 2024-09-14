@@ -52,23 +52,19 @@ class Game
     puts
     puts "                          TUTORIAL:"
     puts
-    puts "Hangman is a word guessing game where the human has to guess"
-    puts "a letter provided by the computer that randomly selects a mystery"
-    puts "word. The player has no more than 10 incorrect guesses. An"
-    puts "incorrect guess would be if the letter does not exist in the "
-    puts "mystery word, correct letter has been selected more than once,"
-    puts "or more than one letter has been entered other than 'save'. If"
-    puts "all the correct letters match the mystery word provided to the"
-    puts "player, then the game is won. When the player makes all 10"
-    puts "incorrect guesses, then the game is lost."
+    puts "Hangman is a word guessing game where you have to guess a letter"
+    puts "provided by the computer that randomly selects a mystery"
+    puts "word."    
     puts
-    puts "Along with the feature to guess a letter, there is also an option"
-    puts "to save the game. During gameplay of Hangman, to save progress from"
-    puts "being lost for the guesser, just type and enter 'save'. The player"
-    puts "will have the option to load the game that was previously saved to" 
-    puts "continue challenging against the computer. To load the game, enter"
-    puts "'l' before gameplay."
+    puts "Maximum number of incorrect guesses: 10"
     puts
+    puts "Incorrect guesses would be:"
+    puts
+    puts "- letter selected does not exist in the mystery word"
+    puts "- same correct letter has been chosen more than once"
+    puts "- at least two letters entered other than 'save'"
+    puts
+    puts "You can load the game if you have previously saved the game"
   end
   #Create an instance method called start_game where the human is at the stage of challenging against
   #the computer 
