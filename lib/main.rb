@@ -91,6 +91,8 @@ class Game
     elsif play_option != 'n' || play_option != 'y' || play_option != 'l'
     end
   end
+  #Create a private instance method called show_request that displays whether to play,
+  #load or cancel game
 end
 
 #Create variable called dictionary to store all the contents from the file called
