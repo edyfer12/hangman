@@ -76,6 +76,8 @@ class Game
       puts "Do you want to start new game(y/n)?"
     end
   end
+  #Create an instance method called play_game where the human is at the stage of challenging against
+  #the computer  
 end
 
 #Create variable called dictionary to store all the contents from the file called
