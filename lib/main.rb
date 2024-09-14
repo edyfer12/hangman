@@ -74,6 +74,7 @@ class Game
   #the computer 
   def start_game 
     #Add a private method that requests the user to play the game
+    request_game
     #Create variable called play_option and store the input from user
     play_option = gets.chomp
     #If n is entered in play_option variable, close the program
