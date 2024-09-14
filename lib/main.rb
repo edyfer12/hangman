@@ -92,6 +92,7 @@ class Game
     end
     #Display the guesser word to indicate the start of the game
     puts guesser_word.join(' ')
+    #Print out Let's Play Hangman!
     #If y is entered in play_option variable, enable the human player to guess a letter
     #in the mystery word provided by the computer that is acting like a game host using a while loop
   end
