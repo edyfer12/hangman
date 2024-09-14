@@ -105,7 +105,7 @@ class Game
       #Declare variable called player_response and store input that is a letter or 'save' into memory
       player_response = gets.chomp.strip.downcase
       #Print out "Please guess a letter or type 'save' to save the game: "
-      puts "Please guess a letter or type 'save' to save the game: "
+      print "Please guess a letter or type 'save' to save the game: "
   end
   private
   #Create a private instance method called request_game that displays whether to play,
