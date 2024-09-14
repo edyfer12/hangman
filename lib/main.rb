@@ -69,7 +69,12 @@ class Game
     puts "        'l' before gameplay."
     puts
     #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
+    if File.exist? 'hangman.json'
+      puts 'Do you want to start new game(y/n) or load(l)?'
     #Otherwise, print out "Do you want to start new game(y/n) or load(l)?" 
+    else
+      puts "Do you want to start new game(y/n)?"
+    end
   end
 end
 
