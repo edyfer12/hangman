@@ -79,23 +79,24 @@ class Game
     #Add a private method that requests the user to play the game
     request_game
     #Create variable called play_option and store the input from user
-    play_option = gets.chomp.strip.downcase
+    play_option = nil
     #Loop repeatedly until the user presses 'n', 'y' or 'l'
-    until play_option == 'n' || play_option == 'y' || play_option == 'l'
+    until play_option == 'n' || play_option == 'y' || play_option == 'l' 
+      play_option = gets.chomp.strip.downcase
       #If n is entered in play_option variable, close the program
       if play_option == 'n'
-        exit
+        exit 
+      #If y is entered in play_option variable, the player has to guess the letters to unravel
+      #the mystery word
+      elsif play_option == 'y'
+        #Add method call
+        guess_letters
       #If l is entered in play_option variable, load the object from the hangman_save.json file
       #If an input is entered other than n, y or l, then print to user the same message if they want to start game
       elsif play_option != 'n' || play_option != 'y' || play_option != 'l'
         request_game
         #Add a new input from user to see if they want to play, load or cancel game
         play_option = gets.chomp.strip.downcase
-      #If y is entered in play_option variable, the player has to guess the letters to unravel
-      #the mystery word
-      elsif play_option == 'y'
-        #Add method call
-        guess_letters
       end
     end
   end
