@@ -109,9 +109,15 @@ class Game
       print "Please guess a letter or type 'save' to save the game: "
       #Declare variable called player_response and store input that is a letter or 'save' into memory
       player_response = gets.chomp.strip.downcase
+      #If letter is not included in the mystery word or word is entered other than 'save',
+      if player_response != 'save' && player_response.length > 1
+        #Store the invalid input in incorrect_inputs array
+        @incorrect_inputs << player_response
+        #Decrement the incorrect_guess_count by 1
+        @incorrect_guesses_left -= 1
       #Check if the letter is included in the mystery word
       #If letter is included, 
-      if @mystery_word.include? player_response
+      elsif @mystery_word.include? player_response
         #Set index to 0 and loop through the each character of the mystery word from first index to
         #last index. 
         index = 0
@@ -124,12 +130,6 @@ class Game
           #Increment index by 1
           index += 1
         end
-      #If letter is not included in the mystery word or word is entered other than 'save',
-      elsif player_response != 'save' && player_response.length > 1
-        #Store the invalid input in incorrect_inputs array
-        @incorrect_inputs << player_response
-        #Decrement the incorrect_guess_count by 1
-        @incorrect_guesses_left -= 1
       end
       #If letter inputted is included in the guesser_word other than underscoree character
       #If user inputs 'save',
