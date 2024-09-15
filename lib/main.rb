@@ -124,7 +124,6 @@ class Game
           index += 1
         end
       end
-      puts @guesser_word.join(' ')
       #If letter is not included in the mystery word or word is entered other than 'save',
         #Store the invalid input in incorrect_inputs array
         #Decrement the incorrect_guess_count by 1
@@ -134,6 +133,7 @@ class Game
         #incorrect_guess_count, incorrect_inputs, guesser_word and mystery_word that is then progressed into a file
         #called, hangman_save.json
       #Print the updated guesser_word array
+      puts @guesser_word.join(' ')
       #Print out incorrect_guesses_left
       #Print out incorrect_inputs array if the array is not empty
     #After exiting the loop, display the results to the player if they have won or lost
