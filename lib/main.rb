@@ -124,6 +124,7 @@ class Game
           index += 1
         end
       end
+      puts @guesser_word.join(' ')
       #If letter is not included in the mystery word or word is entered other than 'save',
         #Store the invalid input in incorrect_inputs array
         #Decrement the incorrect_guess_count by 1
