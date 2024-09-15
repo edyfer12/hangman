@@ -129,7 +129,7 @@ class Game
         #Store the invalid input in incorrect_inputs array
         @incorrect_inputs << player_response
         #Decrement the incorrect_guess_count by 1
-        @incorrect_guess_count -= 1
+        @incorrect_guesses_left -= 1
       end
       #If letter inputted is included in the guesser_word other than underscoree character
       #If user inputs 'save',
@@ -139,7 +139,7 @@ class Game
       #Print the updated guesser_word array
       puts @guesser_word.join(' ')
       #Print out incorrect_guesses_left
-      puts "Incorrect guesses left: #{@incorrect_guess_count}"
+      puts "Incorrect guesses left: #{@incorrect_guesses_left}"
       #Print out incorrect_inputs array if the array is not empty
     #After exiting the loop, display the results to the player if they have won or lost
     #If there are no incorrect_guesses_left, print 'You lost the game!'
