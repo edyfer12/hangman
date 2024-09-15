@@ -110,11 +110,20 @@ class Game
       player_response = gets.chomp.strip.downcase
       #Check if the letter is included in the mystery word
       #If letter is included, 
+      if @mystery_word.include? player_response
         #Set index to 0 and loop through the each character of the mystery word from first index to
         #last index. 
+        index = 0
+        while index < @mystery_word.length
           #Inside the loop, if the index of the letter in guesser word match with element's position in
           #mystery word array then replace the underscore character in guesser word with the letter
+          if @mystery_word[index] == @guesser_word[index]
+            @guesser_word[index] = @mystery_word[index]
+          end
           #Increment index by 1
+          index += 1
+        end
+      end
       #If letter is not included in the mystery word or word is entered other than 'save',
         #Store the invalid input in incorrect_inputs array
         #Decrement the incorrect_guess_count by 1
