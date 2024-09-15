@@ -179,6 +179,7 @@ class Game
        puts
       end
      #After exiting the loop, use the instance method to show the results
+     show_results
   end
   #Create a private instance method called show_results where the results are revealed to the player
   #if they won or lost the game of Hangman
