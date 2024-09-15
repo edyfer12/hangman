@@ -136,6 +136,7 @@ class Game
         #serialize the Game object containing properties such as incorrect_guess_count,
         #incorrect_guess_count, incorrect_inputs, guesser_word and mystery_word that is then progressed into a file
         #called, hangman_save.json
+      #Add empty line to make program presentable
       #Print the updated guesser_word array
       puts @guesser_word.join(' ')
       #Display an empty line to enable the program to appear presentable
