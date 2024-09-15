@@ -138,6 +138,7 @@ class Game
         #called, hangman_save.json
       #Print the updated guesser_word array
       puts @guesser_word.join(' ')
+      #Display an empty line to enable the program to appear presentable
       #Print out incorrect_guesses_left
       puts "Incorrect guesses left: #{@incorrect_guesses_left}"
       #Print out incorrect_inputs array if the array is not empty
