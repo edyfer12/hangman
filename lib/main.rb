@@ -108,7 +108,7 @@ class Game
       #Declare variable called player_response and store input that is a letter or 'save' into memory
       player_response = gets.chomp.strip.downcase
       #If letter is not included in the mystery word or word is entered other than 'save',
-      if player_response != 'save' && player_response.length > 1
+      if (player_response != 'save' && player_response.length > 1) || !(@mystery_word.include? player_response)
         #Store the invalid input in incorrect_inputs array
         @incorrect_inputs << player_response
         #Decrement the incorrect_guess_count by 1
