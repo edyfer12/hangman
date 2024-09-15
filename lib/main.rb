@@ -102,12 +102,13 @@ class Game
         request_game
         #Add a new input from user to see if they want to play, load or cancel game
         play_option = gets.chomp.strip.downcase
-        #If user presses 'y', guess the letters to reveal the mystery_word
+        #If user presses 'y', 
         if play_option == 'y'
           #Create a file object that is used for deleting the save file for Hangman
           f = File.new('hangman_save.json')
           #Delete the file as the player starts new game
           File.delete(f) if File.exist?('hangman_save.json')
+          #Guess the letters to reveal the mystery_word using method call
           uncover_mystery_word
         end
         #Print out to enter options on whether to start new game, load or cancel game
