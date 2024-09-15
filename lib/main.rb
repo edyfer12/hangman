@@ -103,6 +103,8 @@ class Game
         @mystery_word = loaded_file['mystery_word']
         @guesser_word = loaded_file['guesser_word']
         @incorrect_inputs = loaded_file['incorrect_inputs']
+        #Display request message
+        request_game
       #If an input is entered other than n, y or l, then print to user the same message if they want to start game
       elsif play_option != 'n' || play_option != 'y' || play_option != 'l'
         request_game
