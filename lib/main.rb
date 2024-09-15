@@ -90,7 +90,7 @@ class Game
       #the mystery word
       elsif play_option == 'y'
         #Add method call
-        guess_letters
+        uncover_mystery_word
       #If l is entered in play_option variable, load the object from the hangman_save.json file
       #If an input is entered other than n, y or l, then print to user the same message if they want to start game
       elsif play_option != 'n' || play_option != 'y' || play_option != 'l'
@@ -99,7 +99,7 @@ class Game
         play_option = gets.chomp.strip.downcase
         #If user presses 'y', guess the letters
         if play_option == 'y'
-          guess_letters
+          uncover_mystery_word
         end
         #Print out to enter options on whether to start new game, load or cancel game
         request_game
@@ -120,7 +120,7 @@ class Game
   end
   #Create a private instance method called uncover_mystery_word such that the player guesses a letter for the 
   #mystery_word until there are zero incorrect guesses left or figures out the mystery word
-  def guess_letters
+  def uncover_mystery_word
      #Add whitespace
      puts
      #Print out Let's Play Hangman!
