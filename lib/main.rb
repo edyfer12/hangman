@@ -100,6 +100,7 @@ class Game
         play_option = gets.chomp.strip.downcase
         #If user presses 'y', guess the letters to reveal the mystery_word
         if play_option == 'y'
+          #Delete the file as the player starts new game
           uncover_mystery_word
         end
         #Print out to enter options on whether to start new game, load or cancel game
