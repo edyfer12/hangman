@@ -132,6 +132,9 @@ class Game
         end
       end
       #If letter inputted is included in the guesser_word other than underscoree character
+      elsif @guesser_word.include? player_response
+        @incorrect_guesses_left -= 1
+      end
       #If user inputs 'save',
         #serialize the Game object containing properties such as incorrect_guess_count,
         #incorrect_guess_count, incorrect_inputs, guesser_word and mystery_word that is then progressed into a file
