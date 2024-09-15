@@ -97,6 +97,11 @@ class Game
         request_game
         #Add a new input from user to see if they want to play, load or cancel game
         play_option = gets.chomp.strip.downcase
+        #If user presses 'y', guess the letters
+        if play_option == 'y'
+          guess_letters
+        end
+        request_game
       end
     end
   end
