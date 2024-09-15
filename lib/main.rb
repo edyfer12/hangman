@@ -127,7 +127,7 @@ class Game
       #If letter is not included in the mystery word or word is entered other than 'save',
       elsif player_response != 'save' && player_response.length > 1
         #Store the invalid input in incorrect_inputs array
-        incorrect_inputs << player_response
+        @incorrect_inputs << player_response
         #Decrement the incorrect_guess_count by 1
         @incorrect_guess_count -= 1
       end
