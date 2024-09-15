@@ -98,6 +98,7 @@ class Game
     puts "Let's Play Hangman!"
     #Display the guesser word to indicate the start of the game
     puts guesser_word.join(' ')
+    #Print out incorrect guesses left
     #Add whitespace
     puts
     #If y is entered in play_option variable, enable the human player to guess a letter
@@ -106,6 +107,27 @@ class Game
       print "Please guess a letter or type 'save' to save the game: "
       #Declare variable called player_response and store input that is a letter or 'save' into memory
       player_response = gets.chomp.strip.downcase
+      #Check if the letter is included in the mystery word
+        #If letter is included, 
+          #Set index to 0 and loop through the each character of the mystery word from first index to
+          #last index. 
+            #Inside the loop, if the index of the letter in guesser word match with element's position in
+            #mystery word array then replace the underscore character in guesser word with the letter
+            #Increment index by 1
+        #If letter is not included in the mystery word or word is entered other than 'save',
+          #Store the invalid input in incorrect_inputs array
+          #Decrement the incorrect_guess_count by 1
+        #If letter inputted is included in the guesser_word other than underscoree character
+        #If user inputs 'save',
+          #serialize the Game object containing properties such as incorrect_guess_count,
+          #incorrect_guess_count, incorrect_inputs, guesser_word and mystery_word that is then progressed into a file
+          #called, hangman_save.json
+      #Print the updated guesser_word array
+      #Print out incorrect_guesses_left
+      #Print out incorrect_inputs array if the array is not empty
+    #After exiting the loop, display the results to the player if they have won or lost
+    #If there are no incorrect_guesses_left, print 'You lost the game!'
+    #If the elements of guesser_word array matches with mystery_word, print 'You won the game!'
   end
   private
   #Create a private instance method called request_game that displays whether to play,
