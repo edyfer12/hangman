@@ -184,8 +184,14 @@ class Game
   end
   #Create a private instance method called show_results where the results are revealed to the player
   #if they won or lost the game of Hangman
+  def show_results
     #If the incorrect_guesses_left is 0, print on the console 'You have lost the game! Thanks for playing'
+    if @incorrect_guesses_left == 0
+      puts "You have lost the game! Thanks for playing"
     #If the mystery word is equal to the guesser word, print on the console 'You have won the game! Thanks for playing'
+    elsif @mystery_word == @guesser_word.join('')
+      puts "You have won the game! Thanks for playing"
+    end
 end
 
 #Create variable called dictionary to store all the contents from the file called
