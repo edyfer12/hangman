@@ -220,6 +220,7 @@ class Game
     #If the incorrect_guesses_left is 0, print on the console 'You have lost the game! Thanks for playing'
     if @incorrect_guesses_left == 0
       puts "You have lost the game! Thanks for playing"
+      puts "Mystery word was #{@mystery_word}"
     #If the mystery word is equal to the guesser word, print on the console 'You have won the game! Thanks for playing'
     elsif @mystery_word == @guesser_word.join('')
       puts "You have won the game! Thanks for playing"
