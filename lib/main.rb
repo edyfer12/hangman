@@ -159,7 +159,7 @@ class Game
      puts guesser_word.join(' ')
      #If game is loaded, print out incorrect inputs and incorrect guesses
      puts "\nIncorrect guesses left: #{@incorrect_guesses_left}"
-     puts "Incorrect inputs: #{@incorrect_inputs.uniq.join(', ').to_s}" if !@incorrect_inputs.empty?
+     puts "Incorrect guesses: #{@incorrect_inputs.uniq.join(', ').to_s}" if !@incorrect_inputs.empty?
      #Add whitespace
      puts
      #If y is entered in play_option variable, enable the human player to guess a letter
@@ -217,7 +217,7 @@ class Game
        #Print out incorrect_guesses_left
        puts "Incorrect guesses left: #{@incorrect_guesses_left}"
        #Print out incorrect_inputs array if the array is not empty
-       puts "Incorrect_inputs: #{@incorrect_inputs.uniq.join(', ').to_s}" if !@incorrect_inputs.empty?
+       puts "Incorrect guesses: #{@incorrect_inputs.uniq.join(', ').to_s}" if !@incorrect_inputs.empty?
        #Add empty line to make program look 
        puts
       end
