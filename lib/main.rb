@@ -139,7 +139,7 @@ class Game
       #Print the updated guesser_word array
       puts @guesser_word.join(' ')
       #Print out incorrect_guesses_left
-      puts "Incorrect guesses left: " + @incorrect_guesses_left
+      puts "Incorrect guesses left: #{@incorrect_guess_count}"
       #Print out incorrect_inputs array if the array is not empty
     #After exiting the loop, display the results to the player if they have won or lost
     #If there are no incorrect_guesses_left, print 'You lost the game!'
