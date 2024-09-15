@@ -124,10 +124,13 @@ class Game
           #Increment index by 1
           index += 1
         end
-      end
       #If letter is not included in the mystery word or word is entered other than 'save',
+      elsif player_response != 'save' && player_response.length > 1
         #Store the invalid input in incorrect_inputs array
+        incorrect_inputs << player_response
         #Decrement the incorrect_guess_count by 1
+        @incorrect_guess_count -= 1
+      end
       #If letter inputted is included in the guesser_word other than underscoree character
       #If user inputs 'save',
         #serialize the Game object containing properties such as incorrect_guess_count,
