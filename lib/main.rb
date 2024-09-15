@@ -137,10 +137,13 @@ class Game
        #Declare variable called player_response and store input that is a letter or 'save' into memory
        player_response = gets.chomp.strip.downcase
        #If letter is not included in the mystery word or word is entered other than 'save',
-       if (player_response != 'save' && player_response.length > 1) || !(@mystery_word.include? player_response)
+       if (player_response != 'save' && player_response.length > 1) || !(@mystery_word.include? player_response) || player_response == ""
          #Store the invalid input in incorrect_inputs array
-         @incorrect_inputs << player_response
+         @incorrect_inputs << player_response if player_response != ""
          #Decrement the incorrect_guess_count by 1
+         @incorrect_guesses_left -= 1
+       #If letter inputted is included in the guesser_word other than underscoree character
+       elsif @guesser_word.include? player_response
          @incorrect_guesses_left -= 1
        #Check if the letter is included in the mystery word
        #If letter is included, 
@@ -157,9 +160,6 @@ class Game
            #Increment index by 1
            index += 1
          end
-       #If letter inputted is included in the guesser_word other than underscoree character
-       elsif @guesser_word.include? player_response
-         @incorrect_guesses_left -= 1
        end
        #If user inputs 'save',
          #serialize the Game object containing properties such as incorrect_guess_count,
