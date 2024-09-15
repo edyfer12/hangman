@@ -99,7 +99,6 @@ class Game
     puts "Let's Play Hangman!"
     #Display the guesser word to indicate the start of the game
     puts guesser_word.join(' ')
-    #Print out incorrect guesses left
     #Add whitespace
     puts
     #If y is entered in play_option variable, enable the human player to guess a letter
