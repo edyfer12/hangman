@@ -163,6 +163,9 @@ class Game
   end
   #Create a private instance method called guess_letters such that the player guesses a letter for the 
   #mystery_word until there are zero incorrect guesses left or figures out the mystery word
+  def guess_letters
+
+  end
 end
 
 #Create variable called dictionary to store all the contents from the file called
