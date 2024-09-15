@@ -76,8 +76,10 @@ class Game
   #Create an instance method called start_game where the human is at the stage of challenging against
   #the computer 
   def play_game
+    #Create variable called loaded that indicates if game is loaded or not
+    loaded = false
     #Add a private method that requests the user to play the game
-    request_game
+    request_game(loaded)
     #Create variable called play_option and store the input from user
     play_option = nil
     #Loop repeatedly until the user presses 'n' or 'y'
@@ -110,11 +112,13 @@ class Game
           @guesser_word = loaded_file['guesser_word']
           @incorrect_inputs = loaded_file['incorrect_inputs']
         end
+        #Set loaded to true
+        loaded = true
         #Display request message
-        request_game
+        request_game(loaded)
       #If an input is entered other than n, y or l, then print to user the same message if they want to start game
       elsif play_option != 'n' || play_option != 'y' || play_option != 'l'
-        request_game
+        request_game(loaded)
         #Add a new input from user to see if they want to play, load or cancel game
         play_option = gets.chomp.strip.downcase
         #If user presses 'y', 
@@ -128,20 +132,20 @@ class Game
           end
         end
         #Print out to enter options on whether to start new game, load or cancel game
-        request_game
+        request_game(loaded)
       end
     end
   end
   private
   #Create a private instance method called request_game that displays whether to play,
   #load or cancel game
-  def request_game
-    #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
-    if File.exist? 'hangman_save.json'
-      puts 'Do you want to start new game(y/n) or load(l)?'   
+  def request_game(loaded)
     #Otherwise, print out "Do you want to start new game(y/n) or load(l)?" 
-    else
+    if loaded == true || !(File.exist?'hangman_save.json')
       puts "Do you want to start new game(y/n)?"
+    #If the hangman_save.json file does not exist, print out "Do you want to start new game (y/n)?"
+    elsif File.exist?('hangman_save.json') && loaded == false
+      puts 'Do you want to start new game(y/n) or load(l)?'   
     end
   end
   #Create a private instance method called uncover_mystery_word such that the player guesses a letter for the 
