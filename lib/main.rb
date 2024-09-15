@@ -182,6 +182,10 @@ class Game
      #If there are no incorrect_guesses_left, print 'You lost the game!'
      #If the elements of guesser_word array matches with mystery_word, print 'You won the game!'
   end
+  #Create a private instance method called show_results where the results are revealed to the player
+  #if they won or lost the game of Hangman
+    #If the incorrect_guesses_left is 0, print on the console 'You have lost the game! Thanks for playing'
+    #If the mystery word is equal to the guesser word, print on the console 'You have won the game! Thanks for playing'
 end
 
 #Create variable called dictionary to store all the contents from the file called
