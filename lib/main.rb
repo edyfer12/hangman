@@ -115,8 +115,8 @@ class Game
         #last index. 
         index = 0
         while index < @mystery_word.length
-          #Inside the loop, if the index of the letter in guesser word match with element's position in
-          #mystery word array then replace the underscore character in guesser word with the letter
+          #Inside the loop, if the input match with element's position in mystery word array then 
+          #replace the underscore character in guesser word with the letter
           if player_response == @mystery_word[index]
             @guesser_word[index] = @mystery_word[index]
           end
