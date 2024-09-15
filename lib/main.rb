@@ -92,11 +92,6 @@ class Game
       elsif play_option == 'y'
         #Add method call to reveal the mystery word
         uncover_mystery_word
-        #If 'hangman_save.json' file exists delete the file 
-        if File.exist? 'hangman_save.json'
-          f = File.new('hangman_save.json')
-          File.delete(f)
-        end
       #If l is entered in play_option variable, load the object from the hangman_save.json file
       elsif play_option == 'l'
         #Create a file object that points to hangman_save.json
@@ -117,11 +112,6 @@ class Game
         if play_option == 'y'
           #Guess the letters to reveal the mystery_word using method call
           uncover_mystery_word
-          #If 'hangman_save.json' file exists delete the file 
-          if File.exist? 'hangman_save.json'
-            f = File.new('hangman_save.json')
-            File.delete(f)
-          end
         end
         #Print out to enter options on whether to start new game, load or cancel game
         request_game
