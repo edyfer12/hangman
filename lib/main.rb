@@ -178,9 +178,7 @@ class Game
        #Add empty line to make program look 
        puts
       end
-     #After exiting the loop, display the results to the player if they have won or lost
-     #If there are no incorrect_guesses_left, print 'You lost the game!'
-     #If the elements of guesser_word array matches with mystery_word, print 'You won the game!'
+     #After exiting the loop, use the instance method to show the results
   end
   #Create a private instance method called show_results where the results are revealed to the player
   #if they won or lost the game of Hangman
