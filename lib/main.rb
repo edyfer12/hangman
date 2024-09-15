@@ -101,6 +101,7 @@ class Game
         if play_option == 'y'
           guess_letters
         end
+        #Print out to enter options on whether to start new game, load or cancel game
         request_game
       end
     end
