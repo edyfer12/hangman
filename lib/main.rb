@@ -91,7 +91,9 @@ class Game
         request_game
         #Add a new input from user to see if they want to play, load or cancel game
         play_option = gets.chomp.strip.downcase
-      end
+      #If y is entered in play_option variable, the player has to guess the letters to unravel
+      #the mystery word
+        #Add method call
     end
   end
   private
