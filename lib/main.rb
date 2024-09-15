@@ -81,8 +81,8 @@ class Game
     request_game
     #Create variable called play_option and store the input from user
     play_option = nil
-    #Loop repeatedly until the user presses 'n', 'y' or 'l'
-    until play_option == 'n' || play_option == 'y' || play_option == 'l' 
+    #Loop repeatedly until the user presses 'n' or 'y'
+    until play_option == 'n' || play_option == 'y' 
       play_option = gets.chomp.strip.downcase
       #If n is entered in play_option variable, close the program
       if play_option == 'n'
