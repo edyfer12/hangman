@@ -175,7 +175,8 @@ class Game
        puts "Incorrect guesses left: #{@incorrect_guesses_left}"
        #Print out incorrect_inputs array if the array is not empty
        puts "Incorrect_inputs: #{@incorrect_inputs.uniq.to_s}" if !@incorrect_inputs.empty?
-       #Add empty line to make program look presentable
+       #Add empty line to make program look 
+       puts
       end
      #After exiting the loop, display the results to the player if they have won or lost
      #If there are no incorrect_guesses_left, print 'You lost the game!'
