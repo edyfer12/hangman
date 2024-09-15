@@ -93,7 +93,10 @@ class Game
         play_option = gets.chomp.strip.downcase
       #If y is entered in play_option variable, the player has to guess the letters to unravel
       #the mystery word
+      elsif play_option == 'y'
         #Add method call
+        guess_letters
+      end
     end
   end
   private
