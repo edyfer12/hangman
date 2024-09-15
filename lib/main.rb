@@ -1,4 +1,5 @@
 #Include the contents of json.rb
+require 'json'
 #Create a Game class that is used to enable both the computer and human to challenge
 #each other in the game of Hangman. The computer will act as a host to nominate the mystery
 #word and hide the word from the user to guess the letter. The instance variables for the 
@@ -136,8 +137,22 @@ class Game
        print "Please guess a letter or type 'save' to save the game: "
        #Declare variable called player_response and store input that is a letter or 'save' into memory
        player_response = gets.chomp.strip.downcase
+       #If user inputs 'save',
+       if player_response == 'save'
+         #serialize the Game object containing properties such as incorrect_guess_count,
+         #incorrect_guess_count, incorrect_inputs, guesser_word and mystery_word that is then progressed into a file
+         #called, hangman_save.json
+         saved_game = JSON.dump(
+          :incorrect_guesses_left => @incorrect_guesses_left,
+          :incorrect_inputs => @incorrect_inputs,
+          :guesser_word => @guesser_word,
+          :mystery_word => @mystery_word
+          )
+          file = File.open('hangman_save.json', 'w')
+          file.puts saved_game
+          file.close
        #If letter is not included in the mystery word or word is entered other than 'save',
-       if (player_response != 'save' && player_response.length > 1) || !(@mystery_word.include? player_response) || player_response == ""
+       elsif (player_response != 'save' && player_response.length > 1) || !(@mystery_word.include?(player_response) && player_response != 'save') || player_response == ""
          #Store the invalid input in incorrect_inputs array
          @incorrect_inputs << player_response if player_response != ""
          #Decrement the incorrect_guess_count by 1
@@ -160,11 +175,7 @@ class Game
            #Increment index by 1
            index += 1
          end
-       end
-       #If user inputs 'save',
-         #serialize the Game object containing properties such as incorrect_guess_count,
-         #incorrect_guess_count, incorrect_inputs, guesser_word and mystery_word that is then progressed into a file
-         #called, hangman_save.json
+        end
        #Add empty line to make program presentable
        puts
        #Print the updated guesser_word array
