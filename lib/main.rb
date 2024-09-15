@@ -75,8 +75,7 @@ class Game
   end
   #Create an instance method called start_game where the human is at the stage of challenging against
   #the computer 
-  def play_game 
-    puts @mystery_word
+  def play_game
     #Add a private method that requests the user to play the game
     request_game
     #Create variable called play_option and store the input from user
