@@ -131,7 +131,7 @@ class Game
      puts
      #If y is entered in play_option variable, enable the human player to guess a letter
      #in the mystery word provided by the computer that is acting like a game host using a while loop
-     while @incorrect_guesses_left >= 0 && @guesser_word.join('') != @mystery_word
+     while @incorrect_guesses_left > 0 && @guesser_word.join('') != @mystery_word
        #Print out "Please guess a letter or type 'save' to save the game: "
        print "Please guess a letter or type 'save' to save the game: "
        #Declare variable called player_response and store input that is a letter or 'save' into memory
