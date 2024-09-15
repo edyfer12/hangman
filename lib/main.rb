@@ -93,61 +93,6 @@ class Game
         play_option = gets.chomp.strip.downcase
       end
     end
-    #Add whitespace
-    puts
-    #Print out Let's Play Hangman!
-    puts "Let's Play Hangman!"
-    #Display the guesser word to indicate the start of the game
-    puts guesser_word.join(' ')
-    #Add whitespace
-    puts
-    #If y is entered in play_option variable, enable the human player to guess a letter
-    #in the mystery word provided by the computer that is acting like a game host using a while loop
-      #Print out "Please guess a letter or type 'save' to save the game: "
-      print "Please guess a letter or type 'save' to save the game: "
-      #Declare variable called player_response and store input that is a letter or 'save' into memory
-      player_response = gets.chomp.strip.downcase
-      #If letter is not included in the mystery word or word is entered other than 'save',
-      if (player_response != 'save' && player_response.length > 1) || !(@mystery_word.include? player_response)
-        #Store the invalid input in incorrect_inputs array
-        @incorrect_inputs << player_response
-        #Decrement the incorrect_guess_count by 1
-        @incorrect_guesses_left -= 1
-      #Check if the letter is included in the mystery word
-      #If letter is included, 
-      elsif @mystery_word.include? player_response
-        #Set index to 0 and loop through the each character of the mystery word from first index to
-        #last index. 
-        index = 0
-        while index < @mystery_word.length
-          #Inside the loop, if the input match with element's position in mystery word array then 
-          #replace the underscore character in guesser word with the letter
-          if player_response == @mystery_word[index]
-            @guesser_word[index] = @mystery_word[index]
-          end
-          #Increment index by 1
-          index += 1
-        end
-      #If letter inputted is included in the guesser_word other than underscoree character
-      elsif @guesser_word.include? player_response
-        @incorrect_guesses_left -= 1
-      end
-      #If user inputs 'save',
-        #serialize the Game object containing properties such as incorrect_guess_count,
-        #incorrect_guess_count, incorrect_inputs, guesser_word and mystery_word that is then progressed into a file
-        #called, hangman_save.json
-      #Add empty line to make program presentable
-      puts
-      #Print the updated guesser_word array
-      puts @guesser_word.join(' ')
-      #Display an empty line to enable the program to appear presentable
-      puts
-      #Print out incorrect_guesses_left
-      puts "Incorrect guesses left: #{@incorrect_guesses_left}"
-      #Print out incorrect_inputs array if the array is not empty
-    #After exiting the loop, display the results to the player if they have won or lost
-    #If there are no incorrect_guesses_left, print 'You lost the game!'
-    #If the elements of guesser_word array matches with mystery_word, print 'You won the game!'
   end
   private
   #Create a private instance method called request_game that displays whether to play,
@@ -164,7 +109,61 @@ class Game
   #Create a private instance method called guess_letters such that the player guesses a letter for the 
   #mystery_word until there are zero incorrect guesses left or figures out the mystery word
   def guess_letters
-
+     #Add whitespace
+     puts
+     #Print out Let's Play Hangman!
+     puts "Let's Play Hangman!"
+     #Display the guesser word to indicate the start of the game
+     puts guesser_word.join(' ')
+     #Add whitespace
+     puts
+     #If y is entered in play_option variable, enable the human player to guess a letter
+     #in the mystery word provided by the computer that is acting like a game host using a while loop
+       #Print out "Please guess a letter or type 'save' to save the game: "
+       print "Please guess a letter or type 'save' to save the game: "
+       #Declare variable called player_response and store input that is a letter or 'save' into memory
+       player_response = gets.chomp.strip.downcase
+       #If letter is not included in the mystery word or word is entered other than 'save',
+       if (player_response != 'save' && player_response.length > 1) || !(@mystery_word.include? player_response)
+         #Store the invalid input in incorrect_inputs array
+         @incorrect_inputs << player_response
+         #Decrement the incorrect_guess_count by 1
+         @incorrect_guesses_left -= 1
+       #Check if the letter is included in the mystery word
+       #If letter is included, 
+       elsif @mystery_word.include? player_response
+         #Set index to 0 and loop through the each character of the mystery word from first index to
+         #last index. 
+         index = 0
+         while index < @mystery_word.length
+           #Inside the loop, if the input match with element's position in mystery word array then 
+           #replace the underscore character in guesser word with the letter
+           if player_response == @mystery_word[index]
+             @guesser_word[index] = @mystery_word[index]
+           end
+           #Increment index by 1
+           index += 1
+         end
+       #If letter inputted is included in the guesser_word other than underscoree character
+       elsif @guesser_word.include? player_response
+         @incorrect_guesses_left -= 1
+       end
+       #If user inputs 'save',
+         #serialize the Game object containing properties such as incorrect_guess_count,
+         #incorrect_guess_count, incorrect_inputs, guesser_word and mystery_word that is then progressed into a file
+         #called, hangman_save.json
+       #Add empty line to make program presentable
+       puts
+       #Print the updated guesser_word array
+       puts @guesser_word.join(' ')
+       #Display an empty line to enable the program to appear presentable
+       puts
+       #Print out incorrect_guesses_left
+       puts "Incorrect guesses left: #{@incorrect_guesses_left}"
+       #Print out incorrect_inputs array if the array is not empty
+     #After exiting the loop, display the results to the player if they have won or lost
+     #If there are no incorrect_guesses_left, print 'You lost the game!'
+     #If the elements of guesser_word array matches with mystery_word, print 'You won the game!'
   end
 end
 
