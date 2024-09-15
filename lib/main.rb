@@ -130,7 +130,6 @@ class Game
           #Increment index by 1
           index += 1
         end
-      end
       #If letter inputted is included in the guesser_word other than underscoree character
       elsif @guesser_word.include? player_response
         @incorrect_guesses_left -= 1
