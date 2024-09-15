@@ -157,6 +157,9 @@ class Game
      puts "Let's Play Hangman!"
      #Display the guesser word to indicate the start of the game
      puts guesser_word.join(' ')
+     #If game is loaded, print out incorrect inputs and incorrect guesses
+     puts "\nIncorrect guesses left: #{@incorrect_guesses_left}"
+     puts "Incorrect inputs: #{@incorrect_inputs.uniq.join(', ').to_s}" if !@incorrect_inputs.empty?
      #Add whitespace
      puts
      #If y is entered in play_option variable, enable the human player to guess a letter
