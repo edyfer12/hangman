@@ -125,6 +125,7 @@ class Game
      puts
      #If y is entered in play_option variable, enable the human player to guess a letter
      #in the mystery word provided by the computer that is acting like a game host using a while loop
+     while @incorrect_guesses_left >= 0 && @guesser_word != @mystery_word.split(' ')
        #Print out "Please guess a letter or type 'save' to save the game: "
        print "Please guess a letter or type 'save' to save the game: "
        #Declare variable called player_response and store input that is a letter or 'save' into memory
@@ -167,6 +168,7 @@ class Game
        #Print out incorrect_guesses_left
        puts "Incorrect guesses left: #{@incorrect_guesses_left}"
        #Print out incorrect_inputs array if the array is not empty
+      end
      #After exiting the loop, display the results to the player if they have won or lost
      #If there are no incorrect_guesses_left, print 'You lost the game!'
      #If the elements of guesser_word array matches with mystery_word, print 'You won the game!'
