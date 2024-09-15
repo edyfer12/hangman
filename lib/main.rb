@@ -99,15 +99,18 @@ class Game
         end
       #If l is entered in play_option variable, load the object from the hangman_save.json file
       elsif play_option == 'l'
-        #Create a file object that points to hangman_save.json
-        f = File.new('hangman_save.json')
-        #Load the serialized Game object from hangman_save.json file
-        loaded_file = JSON::load(f)
-        #Set each property of the Game object to value from the loaded file
-        @incorrect_guesses_left = loaded_file['incorrect_guesses_left']
-        @mystery_word = loaded_file['mystery_word']
-        @guesser_word = loaded_file['guesser_word']
-        @incorrect_inputs = loaded_file['incorrect_inputs']
+        #Only enable the user to press 'l' if hangman_save.json exists
+        if File.exist? 'hangman_save.json'
+          #Create a file object that points to hangman_save.json
+          f = File.new('hangman_save.json')
+          #Load the serialized Game object from hangman_save.json file
+          loaded_file = JSON::load(f)
+          #Set each property of the Game object to value from the loaded file
+          @incorrect_guesses_left = loaded_file['incorrect_guesses_left']
+          @mystery_word = loaded_file['mystery_word']
+          @guesser_word = loaded_file['guesser_word']
+          @incorrect_inputs = loaded_file['incorrect_inputs']
+        end
         #Display request message
         request_game
       #If an input is entered other than n, y or l, then print to user the same message if they want to start game
