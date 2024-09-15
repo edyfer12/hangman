@@ -90,10 +90,6 @@ class Game
       #If y is entered in play_option variable, the player has to guess the letters to unravel
       #the mystery word
       elsif play_option == 'y'
-        #Create a file object that is used for deleting the save file for Hangman
-        f = File.new('hangman_save.json')
-        #Delete the file as the player starts new game if it exists
-        File.delete(f) if File.exist?('hangman_save.json')
         #Add method call to reveal the mystery word
         uncover_mystery_word
       #If l is entered in play_option variable, load the object from the hangman_save.json file
@@ -104,10 +100,6 @@ class Game
         play_option = gets.chomp.strip.downcase
         #If user presses 'y', 
         if play_option == 'y'
-          #Create a file object that is used for deleting the save file for Hangman
-          f = File.new('hangman_save.json')
-          #Delete the file as the player starts new game
-          File.delete(f) if File.exist?('hangman_save.json')
           #Guess the letters to reveal the mystery_word using method call
           uncover_mystery_word
         end
