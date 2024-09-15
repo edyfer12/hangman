@@ -118,7 +118,7 @@ class Game
       puts "Do you want to start new game(y/n)?"
     end
   end
-  #Create a private instance method called guess_letters such that the player guesses a letter for the 
+  #Create a private instance method called uncover_mystery_word such that the player guesses a letter for the 
   #mystery_word until there are zero incorrect guesses left or figures out the mystery word
   def guess_letters
      #Add whitespace
@@ -174,7 +174,7 @@ class Game
        #Print out incorrect_guesses_left
        puts "Incorrect guesses left: #{@incorrect_guesses_left}"
        #Print out incorrect_inputs array if the array is not empty
-       puts "Incorrect_inputs: #{@incorrect_inputs.uniq.to_s}" if !@incorrect_inputs.empty?
+       puts "Incorrect_inputs: #{@incorrect_inputs.uniq.join(', ').to_s}" if !@incorrect_inputs.empty?
        #Add empty line to make program look 
        puts
       end
