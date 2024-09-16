@@ -130,6 +130,9 @@ class Game
             f = File.new('hangman_save.json')
             File.delete(f)
           end
+        #If user presses 'n'
+        elsif play_option == 'n'
+          exit
         end
         #Print out to enter options on whether to start new game, load or cancel game
         request_game(loaded)
